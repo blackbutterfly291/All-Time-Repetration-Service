@@ -1013,6 +1013,23 @@ body.page-repatriation main{
   font-size: clamp(28px, 4.5vw, 40px);
   color: #23262c;
   line-height: 1.2;
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2em;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.repatriation-hero h1 .heading-flag{
+  flex: 0 0 auto;
+  font-size: 0.95em;
+  line-height: 1;
 }
 
 .repatriation-lead{
