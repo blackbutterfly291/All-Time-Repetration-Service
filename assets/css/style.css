@@ -897,25 +897,20 @@ body.page-repatriation{
     /* subtle white-circle motif inspired by the flag disk */
     repeating-radial-gradient(circle at 20% 12%, rgba(255,255,255,.12) 0 2px, transparent 3px 38px),
     repeating-radial-gradient(circle at 80% 18%, rgba(255,255,255,.10) 0 2px, transparent 3px 44px),
-    radial-gradient(920px 520px at 50% 0%, rgba(11, 74, 162, .22), transparent 60%),
-    radial-gradient(720px 420px at 12% 32%, rgba(200, 16, 46, .14), transparent 62%),
-    linear-gradient(180deg, rgba(217,220,226, .92) 0%, rgba(198,203,212, .88) 45%, rgba(183,188,198, .88) 100%);
+    radial-gradient(920px 520px at 50% 0%, rgba(11, 74, 162, .10), transparent 60%),
+    linear-gradient(180deg, rgba(217,220,226, .95) 0%, rgba(198,203,212, .90) 45%, rgba(183,188,198, .90) 100%);
 }
 
 body.page-repatriation .site-header-top{
   background:
-    linear-gradient(180deg, rgba(255,255,255,.72), rgba(214, 218, 226, .88)),
-    radial-gradient(600px 200px at 18% 10%, rgba(200, 16, 46, .12), transparent 60%),
-    radial-gradient(520px 180px at 82% 10%, rgba(11, 74, 162, .12), transparent 60%);
-  border-bottom-color: rgba(11, 74, 162, .18);
+    linear-gradient(180deg, rgba(255,255,255,.74), rgba(214, 218, 226, .88));
+  border-bottom-color: rgba(53, 57, 66, .22);
 }
 
 body.page-repatriation .site-nav-bar{
   background:
-    linear-gradient(180deg, rgba(210, 215, 224, .96), rgba(196, 203, 214, .96)),
-    radial-gradient(520px 120px at 15% 50%, rgba(200, 16, 46, .14), transparent 60%),
-    radial-gradient(520px 120px at 85% 50%, rgba(11, 74, 162, .14), transparent 60%);
-  border-bottom-color: rgba(11, 74, 162, .18);
+    linear-gradient(180deg, rgba(210, 215, 224, .96), rgba(196, 203, 214, .96));
+  border-bottom-color: rgba(53, 57, 66, .22);
 }
 
 body.page-repatriation .site-nav-bar .nav-link:not(:last-child)::after{
@@ -933,9 +928,9 @@ body.page-repatriation .nav-link:hover{
 }
 
 body.page-repatriation .nav-link.active{
-  background: linear-gradient(135deg, var(--laos-red), var(--laos-blue));
+  background: linear-gradient(135deg, #2b343e, #1f2730);
   color: #fff;
-  box-shadow: 0 10px 22px rgba(11, 74, 162, .22);
+  box-shadow: 0 10px 22px rgba(20, 24, 30, .22);
 }
 
 body.page-repatriation main{
@@ -974,23 +969,24 @@ body.page-repatriation main{
   align-items: center;
   gap: 10px;
   margin-top: 14px;
-  padding: 10px 14px;
+  padding: 14px 18px;
   border-radius: 999px;
-  border: 1px solid rgba(11, 74, 162, .22);
+  border: 1px solid rgba(53, 57, 66, .22);
   background:
-    radial-gradient(240px 80px at 20% 50%, rgba(200, 16, 46, .14), transparent 60%),
-    radial-gradient(240px 80px at 80% 50%, rgba(11, 74, 162, .14), transparent 60%),
-    rgba(255,255,255,.55);
-  box-shadow: 0 10px 22px rgba(11, 74, 162, .10);
+    radial-gradient(240px 80px at 20% 50%, rgba(11, 74, 162, .10), transparent 60%),
+    radial-gradient(240px 80px at 80% 50%, rgba(53, 57, 66, .10), transparent 60%),
+    rgba(255,255,255,.50);
+  box-shadow: 0 10px 22px rgba(20, 24, 30, .08);
   color: #23262c;
   font-weight: 800;
   letter-spacing: .1px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .route-badge i{
-  color: var(--laos-blue);
-  filter: drop-shadow(0 6px 10px rgba(11, 74, 162, .18));
+  color: #274a78;
+  filter: none;
+  font-size: 18px;
 }
 
 .repatriation-hero,
@@ -1033,12 +1029,12 @@ body.page-repatriation main{
   margin-top: 22px;
   padding: 26px 24px;
   border-radius: 14px;
-  border: 1px solid rgba(11, 74, 162, .20);
+  border: 1px solid rgba(53, 57, 66, .22);
   background:
-    radial-gradient(520px 220px at 10% 0%, rgba(200, 16, 46, .10), transparent 60%),
-    radial-gradient(520px 220px at 90% 0%, rgba(11, 74, 162, .10), transparent 60%),
+    radial-gradient(520px 220px at 10% 0%, rgba(11, 74, 162, .08), transparent 60%),
+    radial-gradient(520px 220px at 90% 0%, rgba(53, 57, 66, .06), transparent 60%),
     rgba(235, 238, 244, .84);
-  box-shadow: 0 12px 30px rgba(11, 74, 162, .12);
+  box-shadow: 0 12px 30px rgba(20, 24, 30, .12);
 }
 
 .repatriation-panel--info{
@@ -1047,7 +1043,7 @@ body.page-repatriation main{
 
 .repatriation-divider{
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(11, 74, 162, .26), rgba(200, 16, 46, .22), transparent);
+  background: linear-gradient(90deg, transparent, rgba(53, 57, 66, .26), rgba(11, 74, 162, .14), transparent);
   margin: 0;
 }
 
@@ -1124,29 +1120,29 @@ body.page-repatriation main{
 }
 
 .btn-repatriation-primary{
-  border: 1px solid rgba(11, 74, 162, .32);
-  background: linear-gradient(135deg, rgba(200, 16, 46, .95), rgba(11, 74, 162, .95));
+  border: 1px solid rgba(43, 47, 55, .34);
+  background: linear-gradient(135deg, #3a434e, #202733);
   color: #fff;
-  box-shadow: 0 10px 22px rgba(200, 16, 46, .18);
+  box-shadow: 0 10px 22px rgba(20, 24, 30, .22);
 }
 
 .btn-repatriation-primary:hover{
-  background: linear-gradient(135deg, rgba(200, 16, 46, 1), rgba(11, 74, 162, 1));
-  border-color: rgba(11, 74, 162, .45);
+  background: linear-gradient(135deg, #444c58, #262e3a);
+  border-color: rgba(43, 47, 55, .48);
 }
 
 .btn-repatriation-secondary{
-  border-color: rgba(11, 74, 162, .28);
+  border-color: rgba(53, 57, 66, .22);
   background: rgba(225, 229, 236, .92);
   color: #2f3239;
 }
 
 .btn-repatriation-secondary:hover{
   background:
-    radial-gradient(320px 120px at 20% 40%, rgba(200, 16, 46, .10), transparent 60%),
-    radial-gradient(320px 120px at 80% 40%, rgba(11, 74, 162, .10), transparent 60%),
+    radial-gradient(320px 120px at 20% 40%, rgba(53, 57, 66, .10), transparent 60%),
+    radial-gradient(320px 120px at 80% 40%, rgba(11, 74, 162, .08), transparent 60%),
     rgba(213, 218, 227, .96);
-  border-color: rgba(11, 74, 162, .42);
+  border-color: rgba(53, 57, 66, .38);
 }
 
 .repatriation-footer{
