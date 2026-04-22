@@ -61,9 +61,6 @@
             <br/>
             We support foreigners and families in Laos who need respectful shipping and cross-border coordination to the destination country.
           </p>
-          <!-- <p class="repatriation-note">
-            We support foreigners and families in Laos who need respectful shipping and cross-border coordination to the destination country.
-          </p> -->
         </header>
 
         <section class="repatriation-panel" aria-label="Message of condolence">
@@ -115,30 +112,111 @@
       <section id="contact" aria-label="Contact us">
         <div class="section-title">
           <h2>Contact Us</h2>
-          <span>Discreet cross-border support from Laos</span>
+          <span>
+            Repatriation enquiries from Laos to international destinations
+            <span class="section-title-coords" aria-label="Location coordinates">
+              ·
+              <a
+                href="https://www.google.com/maps?q=17.896333,102.641556"
+                target="_blank"
+                rel="noopener noreferrer"
+                >17°53′46.8″N 102°38′29.6″E</a
+              >
+            </span>
+          </span>
         </div>
-        <div class="panel">
+
+        <div class="panel contact-panel">
+          <div class="contact-map-section">
+            <div class="contact-map-section-head">
+              <h3 class="contact-map-section-title">Office location</h3>
+              <a
+                class="contact-map-section-link"
+                href="https://www.google.com/maps?q=17.896333,102.641556"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open in Google Maps</a
+              >
+            </div>
+            <div class="contact-map-layout" aria-label="Office location on map">
+              <iframe
+                title="Map — 17°53′46.8″N 102°38′29.6″E"
+                src="https://maps.google.com/maps?q=17.896333,102.641556&amp;z=17&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
           <div class="contact-grid">
-            <div class="contact-item">
-              <div class="contact-label">Based in Laos? Repatriation abroad?</div>
-              <div class="contact-value">English + Lao support (where possible).</div>
-              <p class="repatriation-note">
+            <div class="contact-item contact-item--details">
+              <h3 class="contact-block-heading">Direct contact</h3>
+              <dl class="contact-details">
+                <div class="contact-details-row">
+                  <dt class="contact-details-term">Company</dt>
+                  <dd class="contact-details-def">All Time Travel Service CO., Ltd</dd>
+                </div>
+                <div class="contact-details-row">
+                  <dt class="contact-details-term">Telephone</dt>
+                  <dd class="contact-details-def">
+                    <a href="tel:+856214533335">021-453333-5</a>
+                  </dd>
+                </div>
+                <div class="contact-details-row">
+                  <dt class="contact-details-term">Email</dt>
+                  <dd class="contact-details-def">
+                    <a href="mailto:info1@alltimetravellao.com">info1@alltimetravellao.com</a>
+                  </dd>
+                </div>
+              </dl>
+              <p class="contact-support-lead">English and Lao assistance (where possible).</p>
+              <p class="contact-support-note">
                 For urgent or confidential matters, include brief information and any relevant dates. We will respond as promptly as circumstances allow.
               </p>
             </div>
 
-            <div class="contact-item">
+            <div class="contact-item contact-item--form">
+              <h3 class="contact-block-heading">Send a message</h3>
               <form id="contact-form" class="contact-form">
-                <input name="name" type="text" placeholder="Your name" autocomplete="name" required />
-                <input name="email" type="email" placeholder="Email address" autocomplete="email" required />
-                <textarea name="message" placeholder="How can we help?" required></textarea>
+                <div class="contact-form-field">
+                  <label for="contact-name">Name</label>
+                  <input
+                    id="contact-name"
+                    name="name"
+                    type="text"
+                    placeholder="Your full name"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+                <div class="contact-form-field">
+                  <label for="contact-email">Email</label>
+                  <input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    placeholder="name@example.com"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+                <div class="contact-form-field">
+                  <label for="contact-message">Message</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    placeholder="Briefly describe your situation and destination country (if known)."
+                    required
+                  ></textarea>
+                </div>
 
                 <button type="submit" class="btn btn-repatriation-primary">
                   <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
                   Send message
                 </button>
 
-                <p id="contact-status" class="contact-label" aria-live="polite"></p>
+                <p id="contact-status" class="contact-form-status" aria-live="polite"></p>
               </form>
             </div>
           </div>

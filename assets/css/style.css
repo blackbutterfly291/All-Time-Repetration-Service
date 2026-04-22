@@ -20,6 +20,12 @@
 
 *{ box-sizing: border-box; }
 
+@media (prefers-reduced-motion: no-preference){
+  html{
+    scroll-behavior: smooth;
+  }
+}
+
 html, body{
   height: 100%;
 }
@@ -55,6 +61,7 @@ a{
   position: sticky;
   top: 0;
   z-index: 20;
+  padding-top: env(safe-area-inset-top, 0);
 }
 
 .site-header-top{
@@ -380,6 +387,17 @@ main{
   font-size: 13.5px;
 }
 
+.section-title-coords a{
+  text-decoration: underline;
+  text-decoration-color: rgba(39, 74, 120, .35);
+  text-underline-offset: 2px;
+}
+
+body.page-repatriation .section-title-coords a{
+  color: #3b4f68;
+  text-decoration-color: rgba(39, 74, 120, .45);
+}
+
 .panel{
   border: 1px solid var(--border);
   background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(236,246,255,.96));
@@ -518,6 +536,72 @@ main{
   gap: 14px;
 }
 
+.contact-panel{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-map-section{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-map-section-head{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px 16px;
+}
+
+.contact-map-section-title{
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .15px;
+  color: #23262c;
+}
+
+.contact-map-section-link{
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(39, 74, 120, .45);
+  color: #3b4f68;
+}
+
+.contact-map-section-link:hover{
+  color: #1f2f44;
+}
+
+.contact-map-layout{
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(19, 31, 55, .10);
+  background: #e8eaee;
+  box-shadow: 0 8px 20px rgba(20, 24, 30, .08);
+}
+
+.contact-map-layout iframe{
+  width: 100%;
+  height: clamp(240px, 42vw, 380px);
+  border: 0;
+  display: block;
+}
+
+body.page-repatriation .contact-map-layout{
+  border-color: rgba(53, 57, 66, .18);
+  box-shadow: 0 10px 24px rgba(20, 24, 30, .10);
+}
+
+body.page-repatriation .contact-map-section-link{
+  color: #3b4f68;
+  text-decoration-color: rgba(39, 74, 120, .5);
+}
+
 .contact-item{
   display: flex;
   flex-direction: column;
@@ -526,6 +610,114 @@ main{
   border-radius: 18px;
   border: 1px solid rgba(19,31,55,.06);
   background: #ffffff;
+}
+
+.contact-item--details,
+.contact-item--form{
+  gap: 0;
+  padding: 18px 18px 16px;
+}
+
+.contact-block-heading{
+  margin: 0 0 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(19, 31, 55, .08);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .15px;
+  color: #23262c;
+}
+
+body.page-repatriation .contact-block-heading{
+  border-bottom-color: rgba(53, 57, 66, .14);
+}
+
+.contact-details{
+  margin: 0;
+  padding: 0;
+}
+
+.contact-details-row{
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  gap: 8px 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(19, 31, 55, .08);
+  align-items: start;
+}
+
+.contact-details-row:last-of-type{
+  border-bottom: 0;
+  padding-bottom: 2px;
+}
+
+.contact-details-term{
+  margin: 0;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #5f6368;
+  line-height: 1.5;
+}
+
+.contact-details-def{
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #23262c;
+  word-break: break-word;
+}
+
+.contact-details-def a{
+  font-weight: 700;
+}
+
+.contact-support-lead{
+  margin: 16px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #3b3f47;
+}
+
+.contact-support-note{
+  margin: 10px 0 0;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #4f5560;
+}
+
+body.page-repatriation .contact-details-row{
+  border-bottom-color: rgba(53, 57, 66, .12);
+}
+
+body.page-repatriation .contact-details-def a{
+  color: #274a78;
+  text-decoration-color: rgba(39, 74, 120, .45);
+}
+
+.contact-form-field{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-form-field label{
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #5f6368;
+}
+
+.contact-form-status{
+  margin: 4px 0 0;
+  min-height: 1.2em;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
 }
 
 .contact-label{
@@ -887,6 +1079,11 @@ footer{
   .hero-top-image{
     height: clamp(180px, 52vw, 260px);
   }
+  .contact-details-row{
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 14px 0;
+  }
 }
 
 /* Repatriation — solemn, professional condolences theme */
@@ -933,10 +1130,6 @@ body.page-repatriation .nav-link.active{
   box-shadow: 0 10px 22px rgba(20, 24, 30, .22);
 }
 
-body.page-repatriation main{
-  padding-bottom: 48px;
-}
-
 .repatriation-main{
   max-width: 1120px;
 }
@@ -966,11 +1159,15 @@ body.page-repatriation main{
 /* Cross-border route badge (Laos -> International) */
 .route-badge{
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   margin-top: 14px;
+  max-width: 100%;
   padding: 14px 18px;
   border-radius: 999px;
+  text-align: center;
   border: 1px solid rgba(53, 57, 66, .22);
   background:
     radial-gradient(240px 80px at 20% 50%, rgba(11, 74, 162, .10), transparent 60%),
@@ -1007,29 +1204,20 @@ body.page-repatriation main{
 }
 
 .repatriation-hero h1{
-  margin: 14px 0 0;
+  margin: 14px auto 0;
+  max-width: min(22rem, 100%);
   font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   font-weight: 600;
-  font-size: clamp(28px, 4.5vw, 40px);
+  font-size: clamp(24px, 4.2vw, 42px);
   color: #23262c;
-  line-height: 1.2;
-  display: flex;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.2em;
-  min-width: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+  line-height: 1.18;
+  text-wrap: balance;
 }
 
-.repatriation-hero h1 .heading-flag{
-  flex: 0 0 auto;
-  font-size: 0.95em;
-  line-height: 1;
+@media (min-width: 520px){
+  .repatriation-hero h1{
+    max-width: 100%;
+  }
 }
 
 .repatriation-lead{
@@ -1113,7 +1301,10 @@ body.page-repatriation main{
 
 .repatriation-inline-image{
   width: 100%;
-  height: 240px;
+  aspect-ratio: 16 / 10;
+  min-height: 200px;
+  max-height: 360px;
+  height: auto;
   object-fit: cover;
   display: block;
 }
@@ -1184,6 +1375,89 @@ body.page-repatriation main{
   .repatriation-actions .btn{
     justify-content: center;
     width: 100%;
+  }
+}
+
+/* Repatriation page — layout, anchor offset, desktop polish */
+body.page-repatriation main.container{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+body.page-repatriation main{
+  padding-top: 22px;
+  padding-bottom: max(52px, calc(40px + env(safe-area-inset-bottom, 0px)));
+}
+
+body.page-repatriation #repatriation,
+body.page-repatriation #contact{
+  scroll-margin-top: 112px;
+}
+
+body.page-repatriation #contact{
+  margin-top: 8px;
+}
+
+body.page-repatriation #contact .section-title{
+  margin-top: 32px;
+}
+
+@media (max-width: 900px){
+  body.page-repatriation #repatriation,
+  body.page-repatriation #contact{
+    scroll-margin-top: 100px;
+  }
+
+  body.page-repatriation #contact .section-title{
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 1024px){
+  body.page-repatriation main.container{
+    gap: 10px;
+  }
+
+  body.page-repatriation .repatriation-top-image-wrap{
+    margin-top: 4px;
+    margin-bottom: 22px;
+  }
+
+  .repatriation-hero{
+    padding: 32px 0 18px;
+  }
+
+  .repatriation-panel{
+    padding: 28px 28px;
+  }
+
+  .contact-panel{
+    gap: 22px;
+  }
+
+  .contact-grid{
+    gap: 18px;
+  }
+
+  .contact-item--details,
+  .contact-item--form{
+    padding: 20px 22px 18px;
+  }
+}
+
+@media (max-width: 520px){
+  body.page-repatriation .repatriation-panel{
+    padding: 18px 16px;
+  }
+
+  body.page-repatriation .contact-map-layout iframe{
+    height: clamp(200px, 58vw, 300px);
+  }
+
+  body.page-repatriation .contact-item--form .btn{
+    width: 100%;
+    justify-content: center;
   }
 }
 
